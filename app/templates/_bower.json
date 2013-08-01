@@ -1,6 +1,14 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+  "name": "<%= _.slugify(websiteName) %>",
+  "version": "0.0.1",
+  "main": "Gruntfile.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "bootstrap": "~2.3.2",
+    "jquery": "~1.10.x"
+  }
 }
-

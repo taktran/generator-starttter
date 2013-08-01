@@ -23,14 +23,13 @@ StarttterGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    name: 'websiteName',
+    message: 'What is the name of the website?',
+    default: ""
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.websiteName = props.websiteName;
 
     cb();
   }.bind(this));
@@ -38,13 +37,21 @@ StarttterGenerator.prototype.askFor = function askFor() {
 
 StarttterGenerator.prototype.app = function app() {
   this.mkdir('app');
-  this.mkdir('app/templates');
-
-  this.copy('_package.json', 'package.json');
+  // this.copy('app', 'app'); // Not working yet
+  this.template('README.md');
+  this.template('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
+  this.copy('Gruntfile.js');
+  this.copy('karma.conf.js');
+
+  this.mkdir('test');
+  // this.copy('test/*', 'test/*'); // Not working yet
 };
 
 StarttterGenerator.prototype.projectfiles = function projectfiles() {
+  this.copy('.bowerrc', '.bowerrc');
+  this.copy('.travis.yml', '.travis.yml');
+  this.copy('gitignore', '.gitignore');
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
 };
