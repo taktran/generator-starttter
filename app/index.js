@@ -23,9 +23,9 @@ StarttterGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    name: 'websiteName',
-    message: 'What is the name of your website?',
-    default: ""
+    'name': 'websiteName',
+    'message': 'What is the name of your website?',
+    'default': ""
   }];
 
   this.prompt(prompts, function (props) {
