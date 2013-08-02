@@ -38,6 +38,8 @@ StarttterGenerator.prototype.askFor = function askFor() {
 StarttterGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.directory('app', 'app');
+  this.copy('html/_index.html', 'app/index.html');
+
   this.template('README.md');
   this.template('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
