@@ -24,7 +24,7 @@ StarttterGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     name: 'websiteName',
-    message: 'What is the name of the website?',
+    message: 'What is the name of your website?',
     default: ""
   }];
 
