@@ -4,6 +4,7 @@
   "description": "A website built using generator-starttter",
   "main": "Gruntfile.js",
   "scripts": {
+    "start": "grunt",
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "license": "BSD",
