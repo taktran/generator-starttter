@@ -12,9 +12,13 @@ View the site at [http://localhost:7770](http://localhost:7770), or your local (
 
     grunt open
 
-To run the site on another port, use the `port` flag eg, `grunt --port=3000`
+To run the site on another port, use the `port` flag eg,
 
-To run the site using a different livereload port (default is `35729`), use the `lrp` flag, eg, `grunt --lrp=35720`. Use this to prevent this error: `Fatal error: Port 35729 is already in use by another process.`
+    grunt --port=3000
+
+To run the site using a different livereload port (default is `35729`), use the `lrp` flag (prevents this error: `Fatal error: Port 35729 is already in use by another process.`) eg,
+
+    grunt --lrp=35720
 
 ## Testing
 
