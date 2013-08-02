@@ -4,10 +4,24 @@
 A website boilerplate generator for Yeoman, based off [starttter](https://github.com/taktran/starttter).
 
 ## Getting started
-- Make sure you have [yo](https://github.com/yeoman/yo) installed:
-    `npm install -g yo`
-- Install the generator: `npm install -g generator-starttter`
-- Run: `yo starttter`
+
+* Make sure you have [yo](https://github.com/yeoman/yo) installed:
+
+        npm install -g yo
+
+* Install the generator:
+
+        npm install -g generator-starttter
+
+* Run
+
+        yo starttter
+
+You now have a fresh website!
+
+## Development
+
+Run `grunt` to jslint and test your code as you work.
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
