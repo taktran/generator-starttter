@@ -41,7 +41,7 @@ StarttterGenerator.prototype.app = function app() {
   this.copy('html/_index.html', 'app/index.html');
 
   this.template('README.md');
-  this.template('_package.json', 'package.json');
+  this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('Gruntfile.js');
   this.copy('karma.conf.js');
