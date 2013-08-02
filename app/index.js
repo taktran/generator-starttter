@@ -4,7 +4,7 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 
 
-var StarttterGenerator = module.exports = function StarttterGenerator(args, options, config) {
+var StarttterGenerator = module.exports = function StarttterGenerator(args, options) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
