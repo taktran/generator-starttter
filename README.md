@@ -21,7 +21,7 @@ You now have a fresh website!
 
 ## Development
 
-Run `grunt` to jslint and test your code as you work.
+Run `grunt` to jshint and test your code as you work.
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
