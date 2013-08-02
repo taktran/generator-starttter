@@ -37,7 +37,7 @@ StarttterGenerator.prototype.askFor = function askFor() {
 
 StarttterGenerator.prototype.app = function app() {
   this.mkdir('app');
-  // this.copy('app', 'app'); // Not working yet
+  this.directory('app', 'app');
   this.template('README.md');
   this.template('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
@@ -45,7 +45,7 @@ StarttterGenerator.prototype.app = function app() {
   this.copy('karma.conf.js');
 
   this.mkdir('test');
-  // this.copy('test/*', 'test/*'); // Not working yet
+  this.directory('test', 'test');
 };
 
 StarttterGenerator.prototype.projectfiles = function projectfiles() {
