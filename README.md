@@ -13,11 +13,13 @@ A website boilerplate generator for Yeoman, based off [starttter](https://github
 
         npm install -g generator-starttter
 
-* Run
+* Generate starttter website
 
+        mkdir some-website
+        cd some-website
         yo starttter
 
-You now have a fresh website!
+* Now, go make something!
 
 ## Development
 
