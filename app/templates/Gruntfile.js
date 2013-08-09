@@ -104,7 +104,7 @@ module.exports = function (grunt) {
         tasks: ['sass']
       },
       html: {
-        files: ['app/*.html', 'app/css/*.css'],
+        files: ['app/*.html', 'app/*.htm', 'app/css/*.css'],
         options: {
           livereload: liveReloadPort
         }
