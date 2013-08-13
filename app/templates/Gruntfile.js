@@ -61,7 +61,10 @@ module.exports = function (grunt) {
         src: ['karma.conf.js']
       },
       js: {
-        src: ['app/js/*.js']
+        src: [
+          'app/js/*.js',
+          'app/js/**/*.js'
+        ]
       },
       test: {
         src: ['test/unit/*.js']
@@ -85,7 +88,7 @@ module.exports = function (grunt) {
         tasks: ['jshint:gruntfile']
       },
       scripts: {
-        files: ['app/js/*.js', 'app/vendor/**/*'],
+        files: ['<%= jshint.js.src %>', 'app/vendor/**/*'],
         tasks: ['jshint'],
         options: {
           livereload: liveReloadPort
