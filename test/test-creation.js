@@ -46,7 +46,12 @@ describe('starttter generator', function () {
       'karma.conf.js',
       'README.md',
 
-      'app/index.html'
+      'app/public/index.html',
+      'app/public/js/main.js',
+      'app/public/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
+      'app/public/css/main.css',
+
+      'app/views/sass/main.scss'
     ];
 
     helpers.mockPrompt(this.app, {

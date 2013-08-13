@@ -2,16 +2,22 @@
 module.exports = function (grunt) {
   'use strict';
 
-  var port = grunt.option('port') || 7770,
-    appBase = "app",
-    hostname = "0.0.0.0",
-    liveReloadPort = grunt.option('lrp') || 35729;
+  var appConfig = {
+    root: "app",
+    dist: "dist",
+    publicBase: "app/public",
+    sassDir: "app/views/sass",
+
+    port: grunt.option('port') || 7770,
+    hostname: "0.0.0.0",
+    liveReloadPort: grunt.option('lrp') || 35729
+  };
 
   // For livereload
   function addLiveReloadMiddleware(connect, options) {
     var path = require('path'),
       lrSnippet = require('connect-livereload')({
-        port: liveReloadPort
+        port: appConfig.liveReloadPort
       }),
       folderMount = function folderMount(connect, point) {
         return connect['static'](path.resolve(point));
@@ -24,6 +30,7 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
+    app: appConfig,
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
@@ -34,9 +41,9 @@ module.exports = function (grunt) {
     connect: {
       livereload: {
         options: {
-          hostname: hostname,
-          port: port,
-          base: appBase,
+          hostname: '<%= app.hostname %>',
+          port: '<%= app.port %>',
+          base: '<%= app.publicBase %>',
           middleware: addLiveReloadMiddleware
         }
       }
@@ -45,7 +52,7 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         files: {
-          'app/css/main.css': 'app/sass/main.scss'
+          '<%= app.publicBase %>/css/main.css': '<%= app.sassDir %>/main.scss'
         }
       }
     },
@@ -62,8 +69,8 @@ module.exports = function (grunt) {
       },
       js: {
         src: [
-          'app/js/*.js',
-          'app/js/**/*.js'
+          '<%= app.publicBase %>/js/*.js',
+          '<%= app.publicBase %>/js/**/*.js'
         ]
       },
       test: {
@@ -88,10 +95,13 @@ module.exports = function (grunt) {
         tasks: ['jshint:gruntfile']
       },
       scripts: {
-        files: ['<%= jshint.js.src %>', 'app/vendor/**/*'],
+        files: [
+          '<%= jshint.js.src %>',
+          '<%= app.publicBase %>/vendor/**/*'
+        ],
         tasks: ['jshint'],
         options: {
-          livereload: liveReloadPort
+          livereload: '<%= app.liveReloadPort %>'
         }
       },
       karmaConfig: {
@@ -103,20 +113,24 @@ module.exports = function (grunt) {
         tasks: ['jshint', 'karma:unit:run']
       },
       css: {
-        files: 'app/sass/*.scss',
+        files: '<%= app.sassDir %>/*.scss',
         tasks: ['sass']
       },
       html: {
-        files: ['app/*.html', 'app/*.htm', 'app/css/*.css'],
+        files: [
+          '<%= app.publicBase %>/*.html',
+          '<%= app.publicBase %>/*.htm',
+          '<%= app.publicBase %>/css/*.css'
+        ],
         options: {
-          livereload: liveReloadPort
+          livereload: '<%= app.liveReloadPort %>'
         }
       }
     },
 
     open: {
       all: {
-        path: 'http://' + hostname + ':' + port
+        path: 'http://<%= app.hostname %>:<%= app.port %>'
       }
     }
   });
