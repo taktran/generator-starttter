@@ -25,5 +25,10 @@ A website boilerplate generator for Yeoman, based off [starttter](https://github
 
 Run `grunt` to jshint and test your code as you work.
 
+## Changelog
+
+See [Changelog](https://github.com/taktran/starttter/blob/master/CHANGELOG.md).
+
 ## License
+
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
