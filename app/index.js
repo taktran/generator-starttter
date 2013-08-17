@@ -48,7 +48,9 @@ StarttterGenerator.prototype.app = function app() {
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('Gruntfile.js');
-  this.copy('karma.conf.js');
+
+  this.mkdir('config');
+  this.copy('config/karma.conf.js');
 
   this.mkdir('test');
   this.directory('test', 'test');

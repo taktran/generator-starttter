@@ -43,7 +43,7 @@ describe('starttter generator', function () {
       'bower.json',
       'package.json',
       'Gruntfile.js',
-      'karma.conf.js',
+      'config/karma.conf.js',
       'README.md',
 
       'app/public/index.html',

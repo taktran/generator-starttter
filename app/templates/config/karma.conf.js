@@ -4,7 +4,7 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '.';
+basePath = '../app/public';
 
 
 // list of files / patterns to load in the browser
@@ -13,14 +13,14 @@ files = [
   JASMINE_ADAPTER,
 
   // Vendor code
-  'app/vendor/jquery/jquery.min.js',
+  'vendor/jquery/jquery.min.js',
 
   // App code
-  'app/js/*.js',
+  'js/*.js',
 
   // Test specs
-  'test/unit/*.js',
-  'test/unit/**/*.js'
+  '../../test/unit/*.js',
+  '../../test/unit/**/*.js'
 ];
 
 
