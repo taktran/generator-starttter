@@ -26,4 +26,4 @@ Uses [karma](http://karma-runner.github.io/) and [jasmine](http://pivotal.github
 
 Karma is run automatically when `grunt` is called. To run it manually
 
-    karma start
+    karma start config/karma.conf.js
