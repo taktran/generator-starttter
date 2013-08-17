@@ -8,7 +8,7 @@
     "components"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.0-rc1",
+    "bootstrap": "https://github.com/twbs/bootstrap/archive/3.0.0-wip.zip",
     "jquery": "~1.10.x"
   }
 }
