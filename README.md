@@ -27,7 +27,7 @@ Run `grunt` to jshint and test your code as you work.
 
 ## Changelog
 
-See [Changelog](https://github.com/taktran/starttter/blob/master/CHANGELOG.md).
+See [Changelog](https://github.com/taktran/generator-starttter/blob/master/CHANGELOG.md).
 
 ## License
 
