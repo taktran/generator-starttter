@@ -44,6 +44,9 @@ StarttterGenerator.prototype.app = function app() {
   this.directory('app', 'app');
   this.copy('html/_index.html', 'app/public/index.html');
 
+  this.mkdir('bin');
+  this.directory('bin', 'bin');
+
   this.template('README.md');
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');

@@ -51,7 +51,9 @@ describe('starttter generator', function () {
       'app/public/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
       'app/public/css/main.css',
 
-      'app/views/sass/main.scss'
+      'app/views/sass/main.scss',
+
+      'bin/server.js'
     ];
 
     helpers.mockPrompt(this.app, {
