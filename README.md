@@ -21,6 +21,8 @@ A website boilerplate generator for Yeoman, based off [starttter](https://github
 
 * Now, go make something!
 
+  See [generated README.md](https://github.com/taktran/generator-starttter/blob/master/app/templates/README.md) for more details
+
 ## Development
 
 Run `grunt` to jshint and test your code as you work.
