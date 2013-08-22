@@ -44,6 +44,7 @@ describe('starttter generator', function () {
       'package.json',
       'Gruntfile.js',
       'config/karma.conf.js',
+      'Procfile',
       'README.md',
 
       'app/public/index.html',

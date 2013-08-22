@@ -50,6 +50,7 @@ StarttterGenerator.prototype.app = function app() {
   this.template('README.md');
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
+  this.copy('Procfile');
   this.copy('Gruntfile.js');
 
   this.mkdir('config');
