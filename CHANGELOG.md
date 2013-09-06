@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+* Use `node-static` for serving files
+* Add Procfile
+* Fixes [yo TypeError bug](https://github.com/yeoman/generator-webapp/issues/137)
+
 ## 0.2.0
 
 * Move `karma.conf.js` to `config` folder
