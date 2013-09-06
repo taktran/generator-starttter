@@ -25,6 +25,6 @@
     "grunt-open": "~0.2.0",
     "karma": "~0.8.6",
     "grunt-karma": "~0.4.4",
-    "connect-livereload": "~0.2.0",
+    "connect-livereload": "~0.2.0"
   }
 }
