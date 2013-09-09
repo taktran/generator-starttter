@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+* Fix up stupid comma mistake
+
 ## 0.2.1
 
 * Use `node-static` for serving files
