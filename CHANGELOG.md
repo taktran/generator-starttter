@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+* Add config to `npm test` command
+
 ## 0.2.2
 
 * Fix up stupid comma mistake
