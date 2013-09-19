@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+* Add more ie css class options
+
 ## 0.2.3
 
 * Add config to `npm test` command
