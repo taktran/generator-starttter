@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "start": "node bin/server.js",
-    "test": "./node_modules/.bin/karma start config/karma.conf.js --single-run --browsers PhantomJS"
+    "test": "grunt ci:test"
   },
   "engines": {
     "node": "0.10.x",
@@ -23,8 +23,8 @@
     "grunt-contrib-connect": "~0.1.2",
     "grunt-contrib-sass": "~0.2.2",
     "grunt-open": "~0.2.0",
-    "karma": "~0.8.6",
-    "grunt-karma": "~0.4.4",
+    "karma": "~0.10.2",
+    "grunt-karma": "~0.6.2",
     "connect-livereload": "~0.2.0"
   }
 }

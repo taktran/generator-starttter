@@ -79,10 +79,35 @@ module.exports = function (grunt) {
     },
 
     karma: {
+      unitTestFiles: [
+        // Vendor code
+        'app/public/vendor/jquery/jquery.min.js',
+
+        // App code
+        'app/public/js/*.js',
+
+        // Test specs
+        'test/unit/*.js',
+        'test/unit/**/*.js'
+      ],
+      // Unit tests
       unit: {
-        configFile: 'karma.conf.js',
-        background: true
-      }
+        configFile: 'config/karma.conf.js',
+        background: true,
+        options: {
+          basePath: '../',
+          files: '<%= karma.unitTestFiles %>'
+        }
+      },
+      // Unit tests for continuous integration
+      unitCI: {
+        configFile: 'config/karma.conf.js',
+        singleRun: true,
+        options: {
+          basePath: '../',
+          files: '<%= karma.unitTestFiles %>'
+        }
+      },
     },
 
     watch: {
@@ -135,6 +160,20 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['connect', 'karma', 'watch']);
+  grunt.registerTask('default', [
+    'connect',
+    'karma:unit',
+    'watch'
+  ]);
+
+  // Run all tests for CI
+  grunt.registerTask('ci:test', [
+    'karma:unitCI',
+  ]);
+
+  // Run all tests
+  grunt.registerTask('test', [
+    'karma:unit:run'
+  ]);
 
 };

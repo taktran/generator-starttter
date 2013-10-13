@@ -1,76 +1,54 @@
-/*jshint -W117 */
-// Karma configuration
-// Generated on Tue May 28 2013 16:35:00 GMT+0100 (BST)
+// Unit tests
+module.exports = function(config) {
+  "use strict";
+
+  config.set({
+    frameworks: ["jasmine"],
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress', 'junit'
+    reporters: ['progress'],
 
 
-// base path, that will be used to resolve files and exclude
-basePath = '../app/public';
+    // web server port
+    port: 9876,
 
 
-// list of files / patterns to load in the browser
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-
-  // Vendor code
-  'vendor/jquery/jquery.min.js',
-
-  // App code
-  'js/*.js',
-
-  // Test specs
-  '../../test/unit/*.js',
-  '../../test/unit/**/*.js'
-];
+    // cli runner port
+    runnerPort: 9100,
 
 
-// list of files to exclude
-exclude = [
-
-];
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
 
 
-// test results reporter to use
-// possible values: 'dots', 'progress', 'junit'
-reporters = ['progress'];
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
 
-// web server port
-port = 9876;
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: false,
 
 
-// cli runner port
-runnerPort = 9100;
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    browsers: ['PhantomJS'],
 
 
-// enable / disable colors in the output (reporters and logs)
-colors = true;
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
 
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_INFO;
+    // Continuous Integration mode
+    // if true, it capture browsers, run tests and exit
+    singleRun: false
+  });
+};
 
-
-// enable / disable watching file and executing tests whenever any file changes
-autoWatch = true;
-
-
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-browsers = ['PhantomJS'];
-
-
-// If browser does not capture in given timeout [ms], kill it
-captureTimeout = 60000;
-
-
-// Continuous Integration mode
-// if true, it capture browsers, run tests and exit
-singleRun = false;
