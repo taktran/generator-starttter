@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.5
+
+* Upgrade karma to 0.10.2
+* Fix up karma reference in Gruntfile.js
+
 ## 0.2.4
 
 * Add more ie css class options
