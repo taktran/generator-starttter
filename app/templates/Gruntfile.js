@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         src: ['Gruntfile.js']
       },
       karmaConfig: {
-        src: ['karma.conf.js']
+        src: ['config/karma.conf.js']
       },
       js: {
         src: [
