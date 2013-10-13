@@ -2,6 +2,6 @@
 
 describe("main.js", function() {
   it("true", function() {
-    expect(true).toBeTruthy(true);
+    expect(true).toBeTruthy();
   });
 });
