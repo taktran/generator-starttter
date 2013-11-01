@@ -4,6 +4,10 @@ A website built using [generator-starttter](https://github.com/taktran/generator
 
 ## Development
 
+Install pre-requisites
+
+    npm install
+
 Start the server
 
     grunt
