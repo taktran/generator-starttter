@@ -34,8 +34,15 @@
 
     "describe": true,
     "it": true,
+
+    // Isolate tests
+    "ddescribe": true,
+    "iit": true,
+
+    // Exclude tests
     "xdescribe": true,
     "xit": true,
+
     "expect": true,
     "beforeEach": true
   }
