@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.6
+
+* Update readme and .jshintrc
+* Remove outdated h5bp html tags
+
 ## 0.2.5
 
 * Upgrade karma to 0.10.2

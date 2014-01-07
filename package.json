@@ -1,6 +1,6 @@
 {
   "name": "generator-starttter",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A website boilerplate generator for Yeoman, based off starttter",
   "keywords": [
     "yeoman-generator",
