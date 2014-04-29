@@ -4,8 +4,10 @@ module.exports = function (grunt) {
 
   var appConfig = {
     root: "app",
-    dist: "dist",
+
     publicBase: "app/public",
+    dist: "app/public/dist",
+    js: "app/public/js",
     sassDir: "app/views/sass",
 
     port: grunt.option('port') || 7770,
@@ -124,10 +126,10 @@ module.exports = function (grunt) {
           '<%= jshint.js.src %>',
           '<%= app.publicBase %>/vendor/**/*'
         ],
-        tasks: ['jshint'],
-        options: {
-          livereload: '<%= app.liveReloadPort %>'
-        }
+        tasks: [
+          'jshint',
+          'browserify'
+        ]
       },
       karmaConfig: {
         files: '<%= jshint.karmaConfig.src %>',
@@ -150,7 +152,23 @@ module.exports = function (grunt) {
         options: {
           livereload: '<%= app.liveReloadPort %>'
         }
+      },
+      dist: {
+        files: [
+          '<%= app.dist %>/js/*.js',
+          '<%= app.dist %>/js/**/*.js'
+        ],
+        options: {
+          livereload: '<%= app.liveReloadPort %>'
+        }
       }
+    },
+
+    browserify: {
+      js: {
+        src: '<%= app.js %>/app.js',
+        dest: '<%= app.dist %>/js/app.js'
+      },
     },
 
     open: {

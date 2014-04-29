@@ -48,7 +48,7 @@ describe('starttter generator', function () {
       'README.md',
 
       'app/public/index.html',
-      'app/public/js/main.js',
+      'app/public/js/app.js',
       'app/public/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
       'app/public/css/main.css',
 
